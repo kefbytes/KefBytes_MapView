@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KefMapView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CWp-Z8-9f6">
+                                <rect key="frame" x="140" y="20" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="2Rr-Ku-bZK"/>
+                                    <constraint firstAttribute="width" constant="320" id="sLb-FQ-gOu"/>
+                                </constraints>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oea-PA-Bva">
+                                <rect key="frame" x="140" y="348" width="320" height="232"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="STs-TY-1r9">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STs-TY-1r9" id="6vt-WF-dwV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oea-PA-Bva" firstAttribute="width" secondItem="CWp-Z8-9f6" secondAttribute="width" id="4Lu-Ut-Qth"/>
+                            <constraint firstItem="CWp-Z8-9f6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GTa-av-xwb"/>
+                            <constraint firstItem="Oea-PA-Bva" firstAttribute="top" secondItem="CWp-Z8-9f6" secondAttribute="bottom" constant="8" id="MMD-3A-GRk"/>
+                            <constraint firstItem="CWp-Z8-9f6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NUn-0D-gw7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oea-PA-Bva" secondAttribute="bottom" constant="20" id="Rwe-q4-wuM"/>
+                            <constraint firstItem="Oea-PA-Bva" firstAttribute="centerX" secondItem="CWp-Z8-9f6" secondAttribute="centerX" id="qCX-8W-pcD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="CWp-Z8-9f6" id="k1Q-cC-rBS"/>
+                        <outlet property="tableView" destination="Oea-PA-Bva" id="bdm-2B-Rju"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="375"/>
+        </scene>
+    </scenes>
+</document>
