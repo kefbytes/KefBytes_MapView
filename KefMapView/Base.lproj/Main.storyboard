@@ -38,6 +38,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcb-V1-pTh">
+                                <rect key="frame" x="509" y="327" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -50,6 +56,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="label" destination="Dcb-V1-pTh" id="zlp-ZB-p2K"/>
                         <outlet property="mapView" destination="CWp-Z8-9f6" id="k1Q-cC-rBS"/>
                         <outlet property="tableView" destination="Oea-PA-Bva" id="bdm-2B-Rju"/>
                     </connections>
